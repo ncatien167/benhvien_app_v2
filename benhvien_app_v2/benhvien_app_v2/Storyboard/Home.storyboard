@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="xDg-7d-g4V">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="FJz-zH-NA2" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JOf-xz-aMz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập tên bênh viện" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wa0-sY-OjH">
+                                <rect key="frame" x="20" y="80" width="280" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Zhm-LC-bMe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXg-zB-Nkb">
+                                <rect key="frame" x="310" y="80" width="45" height="45"/>
+                                <color key="backgroundColor" red="0.82352941176470584" green="0.13725490196078433" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="DHR-tl-A1i"/>
+                                    <constraint firstAttribute="height" constant="45" id="JUg-ue-Hdq"/>
+                                </constraints>
+                                <state key="normal" image="search-btn-icon"/>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="FJz-zH-NA2" eventType="touchUpInside" id="TB5-YX-eLe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swU-Mg-26G">
+                                <rect key="frame" x="20" y="185" width="335" height="45"/>
+                                <color key="backgroundColor" red="0.18431372549019609" green="0.54509803921568623" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Q70-Vb-JYh"/>
+                                </constraints>
+                                <state key="normal" title="Tìm kiếm nâng cao">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToAdvanceSearchViewController:" destination="FJz-zH-NA2" eventType="touchUpInside" id="ffM-us-AdF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="swU-Mg-26G" firstAttribute="top" secondItem="Wa0-sY-OjH" secondAttribute="bottom" constant="60" id="9MI-b9-Q5S"/>
+                            <constraint firstItem="Wa0-sY-OjH" firstAttribute="leading" secondItem="tIf-mf-2dr" secondAttribute="leading" constant="20" id="GGL-wQ-Z0D"/>
+                            <constraint firstItem="tIf-mf-2dr" firstAttribute="trailing" secondItem="wXg-zB-Nkb" secondAttribute="trailing" constant="20" id="JdZ-AC-eXs"/>
+                            <constraint firstItem="tIf-mf-2dr" firstAttribute="trailing" secondItem="swU-Mg-26G" secondAttribute="trailing" constant="20" id="XUa-w3-RKe"/>
+                            <constraint firstItem="wXg-zB-Nkb" firstAttribute="top" secondItem="tIf-mf-2dr" secondAttribute="top" constant="60" id="aP6-vF-QTc"/>
+                            <constraint firstItem="wXg-zB-Nkb" firstAttribute="leading" secondItem="Wa0-sY-OjH" secondAttribute="trailing" constant="10" id="aT3-ib-X62"/>
+                            <constraint firstItem="Wa0-sY-OjH" firstAttribute="top" secondItem="tIf-mf-2dr" secondAttribute="top" constant="60" id="lk9-X6-VgV"/>
+                            <constraint firstItem="swU-Mg-26G" firstAttribute="leading" secondItem="tIf-mf-2dr" secondAttribute="leading" constant="20" id="utu-r6-cQT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tIf-mf-2dr"/>
+                    </view>
+                    <connections>
+                        <outlet property="advanceSearchButton" destination="swU-Mg-26G" id="faD-2V-yEl"/>
+                        <outlet property="searchButton" destination="wXg-zB-Nkb" id="3jh-Wc-lrf"/>
+                        <outlet property="searchTextField" destination="Wa0-sY-OjH" id="KQT-WE-CmT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6v-AI-nSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-388" y="151"/>
+        </scene>
+        <!--Advance Search View Controller-->
+        <scene sceneID="xLo-LO-rUk">
+            <objects>
+                <viewController storyboardIdentifier="AdvanceSearchViewController" id="GBk-pm-KTs" customClass="AdvanceSearchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c11-T0-8zD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="159-e5-T2W"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L4R-uM-Xph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="482"/>
+        </scene>
+        <!--Search Result View Controller-->
+        <scene sceneID="k9G-Qp-RFD">
+            <objects>
+                <viewController storyboardIdentifier="SearchResultViewController" id="Fyc-eE-3JT" customClass="SearchResultViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aca-ui-crT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Jkt-K4-4AH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Exu-rf-upi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="-225"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="search-btn-icon" width="30" height="31"/>
+    </resources>
+</document>
